@@ -1,5 +1,7 @@
 export interface Card {
     name: string,
     image: string,
-    wikiLink: string,
+    set?: string,
+    legal?: string,
+    wikiLink?: string,
 }
