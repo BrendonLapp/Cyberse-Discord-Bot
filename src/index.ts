@@ -5,9 +5,17 @@ import { FlipCoinCommand } from "./commands/FlipCoinCommand";
 import { YugiohCommand } from "./commands/YugiohCommand";
 import { PokemonCommand } from "./commands/PokemonCommand";
 import { MagicCommand } from "./commands/MagicCommand";
+import express, { Request, Response } from "express";
 
 const PORT = process.env.PORT || 5000;
 const Client = new Discord.Client();
+
+const app = express();
+const client = new Discord.Client();
+app.use(express.urlencoded({ extended: true }));
+app.use('/', (request: Request, response: Response) => {
+  response.sendStatus(200);
+});
 
 Client.on('ready', () => {
   console.log('I am ready ')
@@ -76,3 +84,4 @@ Client.on("message", async (message: Message) => {
 });
 
 Client.login(Config.token);
+app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
