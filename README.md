@@ -3,11 +3,11 @@
 This is a discord bot that I have developed to fit the needs of a server that me and my friends use.
 
 ## Commands
-;rolldie
-;flipcoin
-;yugioh "card name"
-;pokemon "card code"
-;mtg "card name"
+>;rolldie
+>;flipcoin
+>;yugioh "card name"
+>;pokemon "card code"
+>;mtg "card name"
 
 ## Tech used
 The bot itself is hosted on Heroku.
