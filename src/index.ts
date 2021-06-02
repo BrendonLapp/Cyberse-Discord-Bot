@@ -4,7 +4,7 @@ import RollDieCommand from './commands/RollDieCommand';
 import { FlipCoinCommand } from "./commands/FlipCoinCommand";
 import { YugiohCommand } from "./commands/YugiohCommand";
 import { PokemonCommand } from "./commands/PokemonCommand";
-import { MagicCommand } from "./commands/MagicCommand";
+import { MagicCommand } from "./commands/MagicCommand";;
 import express, { Request, Response } from "express";
 
 const PORT = process.env.PORT || 5000;
@@ -49,7 +49,7 @@ Client.on("message", async (message: Message) => {
       message.channel.send("There is no card with that name");
     }
     else {
-      message.channel.send("Info for: " + response.name);
+      message.channel.send(response.displayMessage);
       message.channel.send(response.image)
     }
   }
@@ -77,7 +77,7 @@ Client.on("message", async (message: Message) => {
       message.channel.send("There is no card with that code");
     }
     else {
-      message.channel.send("Info for: " + response.name);
+      message.channel.send(response.displayMessage);
       message.channel.send(response.image)
     }
   }

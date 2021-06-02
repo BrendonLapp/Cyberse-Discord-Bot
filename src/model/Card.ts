@@ -3,5 +3,7 @@ export interface Card {
     image: string,
     set?: string,
     legal?: string,
+    legalCommander?: string,
     wikiLink?: string,
+    displayMessage?: string,
 }

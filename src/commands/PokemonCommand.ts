@@ -8,7 +8,13 @@ class PokemonCommand {
 
             let foundCard: Card = {
                 name: response.data.data.name,
-                image: response.data.data.images.large
+                image: response.data.data.images.large,
+                legal: response.data.data.legalities,
+            }
+
+            foundCard.displayMessage = "Info for: " + foundCard.name;
+            if (foundCard.legal === "Banned") {
+                foundCard.displayMessage += "banned :no_entry_sign:"
             }
     
             return foundCard;
