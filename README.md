@@ -16,9 +16,15 @@ Run this bot locally by using:
 + ;mtg *card name* (Returns an image, cardname and legaility in commander and stander if on the list)
 
 ## Tech used
-The bot itself is hosted on Heroku.
+The bot itself is hosted live on Heroku and goes down everyday between 3am-9am mountain standard time.
 
-The bot uses TypeScript for it's main language.
+It is written in typescript.
 
 ## Libraries used
-Express and Discord.JS are the main two used.
+Express
+Discord.JS
+
+## Future Work
+Add a ;help command.
+Add a command handler rather than calling each command on the index entry point.
+Expand the existing functionality of the yugioh, pokemon and mtg commands.
