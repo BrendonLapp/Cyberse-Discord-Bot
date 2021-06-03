@@ -30,8 +30,8 @@ Client.on("message", async (message: Message) => {
 
   if (command === "rolldie") {
       let Controller = new RollDieCommand();
-      const dieRoll = Controller.run();
-      message.channel.send("You rolled a: " + dieRoll + "!");
+      const dieRoll = Controller.run(parseInt(args[0]));
+      message.channel.send(dieRoll);
   }
 
   if (command === "flipcoin") {
