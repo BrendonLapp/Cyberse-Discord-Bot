@@ -9,11 +9,16 @@ Run this bot locally by using:
 
 ## Commands
 > Any command that takes extra parameters in "" do not need the "" and instead just the name or code
++ help
 + ;rolldie "number of rolls" (Can be run without an number of rolls argument or up to the max of 6)
 + ;flipcoin
 + ;yugioh *card name* (Returns an image, cardname and banlist status if on the list)
 + ;pokemon *card code* (Returns an image, cardname and legality in standard if on the list)
 + ;mtg *card name* (Returns an image, cardname and legaility in commander and stander if on the list)
++ ;play *song name or url*
++ ;stop
++ ;skip
++ ;addrelated (Adds a related song based on the current one playing)
 
 ## Tech used
 The bot itself is hosted live on Heroku and goes down everyday between 3am-9am mountain standard time.
@@ -21,8 +26,9 @@ The bot itself is hosted live on Heroku and goes down everyday between 3am-9am m
 It is written in typescript.
 
 ## Libraries used
-Express
-Discord.JS
++ Express
++ Discord.JS
++ Distube.JS
 
 ## Future Work
 Implement a music playing feature

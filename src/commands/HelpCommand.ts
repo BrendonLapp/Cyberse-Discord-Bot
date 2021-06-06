@@ -12,6 +12,9 @@ const Help = (message: Message) => {
         .addFields(
             { name: 'Commands', value: `help \n flipcoin \n rolldie \n pokemon "cardcode" \n yugioh "cardname" \n magic "cardname"`, inline: true },
         )
+        .addFields(
+            { name: 'Music Commands', value: `play "song name" \n stop \n skip \n addrelated`, inline: true },
+        )
     message.channel.send(help);
 }
 

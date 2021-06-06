@@ -31,13 +31,18 @@
     "ts-node": "^8.10.2"
   },
   "dependencies": {
+    "@discordjs/opus": "^0.5.0",
     "@types/express": "^4.17.7",
     "@types/node": "^14.0.20",
     "axios": "^0.21.1",
     "discord.js": "^12.2.0",
+    "distube": "^2.8.14",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "ffmpeg-static": "^4.3.0",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "ytdl": "^1.4.1",
+    "ytdl-core": "^4.8.2"
   }
 }
