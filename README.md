@@ -25,6 +25,5 @@ Express
 Discord.JS
 
 ## Future Work
-Add a ;help command.
-Add a command handler rather than calling each command on the index entry point.
+Implement a music playing feature
 Expand the existing functionality of the yugioh, pokemon and mtg commands.

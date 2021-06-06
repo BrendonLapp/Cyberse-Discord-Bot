@@ -1,14 +1,14 @@
-class FlipCoinCommand {
-    run() {
-        const flipCoin = Math.floor(Math.random() * (2 - 1 + 1) + 1);
+import { Message } from "discord.js";
+
+const FlipCoinCommand = (message: Message) => {
+    const flipCoin = Math.floor(Math.random() * (2 - 1 + 1) + 1);
         let coinFace;
         if (flipCoin === 1) {
             coinFace = "Heads"
         } else {
             coinFace = "Tails"
         }
-        return coinFace;
-    }
+        message.channel.send("The coin landed on: " + coinFace + "!")
 }
 
-export { FlipCoinCommand }
+export default FlipCoinCommand;
