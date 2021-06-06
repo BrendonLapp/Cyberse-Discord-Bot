@@ -1,8 +1,8 @@
-import Discord, { Message } from "discord.js";
+import Discord, { Message } from 'discord.js';
 import Config from './config/config.json';
-import express, { Request, Response } from "express";
-import CommandHandler from "./commandHandler";
-import DisTube from "distube";
+import express, { Request, Response } from 'express';
+import CommandHandler from './commandHandler';
+import DisTube from 'distube';
 
 const PORT = process.env.PORT || 5000;
 const Client = new Discord.Client();
@@ -15,31 +15,29 @@ app.use('/', (request: Request, response: Response) => {
 });
 
 Client.on('ready', () => {
-  console.log('I am ready ')
+  console.log('I am ready ');
 });
 
 const prefix = Config.prefix;
 const player = new DisTube(client);
 
-player.on('initQueue', queue => {
+player.on('initQueue', (queue) => {
   queue.autoplay = false;
   queue.volume = 50;
 });
 
-player.on('error', message => {
+player.on('error', (message) => {
   console.error();
 });
 
-Client.on("message", async (message: Message) => {
-
-  if (message.content.startsWith(prefix))
-  {
+Client.on('message', async (message: Message) => {
+  if (message.content.startsWith(prefix)) {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift();
     console.log(command);
-  
+
     const handler = new CommandHandler();
-    if (command != undefined){
+    if (command != undefined) {
       handler.Handler(message, command, args, player);
     }
   }

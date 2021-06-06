@@ -1,34 +1,33 @@
-import { Message } from "discord.js";
+import { Message } from 'discord.js';
 
 const RollDieCommand = (message: Message, rolls: number) => {
   if (rolls > 6) {
-    return "You can't roll that many dice! The max is 6."
+    return "You can't roll that many dice! The max is 6.";
   }
 
   if (rolls == 0) {
     return "You can't roll 0 dice! You must roll at least one or use ;rolldie with no numbers";
   }
 
-  let messageBuilder = "You rolled a:";
+  let messageBuilder = 'You rolled a:';
 
   if (isNaN(rolls)) {
     const roll = Math.floor(Math.random() * (6 - 1 + 1) + 1);
-    messageBuilder += " " + roll;
+    messageBuilder += ' ' + roll;
   }
 
   let rollTotal = 0;
-  for (var index = 0; index < rolls; index++) {
-    
+  for (let index = 0; index < rolls; index++) {
     const roll = Math.floor(Math.random() * (6 - 1 + 1) + 1);
-    messageBuilder += " " + roll;
+    messageBuilder += ' ' + roll;
     rollTotal += roll;
     if (index == rolls - 1) {
-      messageBuilder  += "!";
+      messageBuilder += '!';
     } else {
-      messageBuilder += " and"
+      messageBuilder += ' and';
     }
   }
   message.channel.send(messageBuilder);
-}
+};
 
 export default RollDieCommand;

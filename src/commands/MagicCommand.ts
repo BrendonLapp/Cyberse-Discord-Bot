@@ -7,7 +7,7 @@ const Magic = async (message: Message, args: any) => {
         const cardName = args.join(" ");
         const response = await axios.get('https://api.scryfall.com/cards/named?exact=' + cardName);
 
-        let foundCard: Card = {
+        const foundCard: Card = {
             name: response.data.name,
             image: response.data.image_uris.normal,
             legal: response.data.legalities.standard,

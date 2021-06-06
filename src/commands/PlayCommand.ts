@@ -5,7 +5,7 @@ const Play = async (message: Message, args: any, player: Distube) => {
     try {
         if (message.member != undefined) {
             if (message.member.voice.channel != undefined) {
-                let search = args.join(" ");
+                const search = args.join(" ");
                 player.play(message, search);
 
             } else {

@@ -7,7 +7,7 @@ const Pokemon = async (message: Message, args: any) => {
         const cardCode = args.join(" ");
         const response = await axios.get('https://api.pokemontcg.io/v2/cards/' + cardCode);
 
-        let foundCard: Card = {
+        const foundCard: Card = {
             name: response.data.data.name,
             image: response.data.data.images.large,
             legal: response.data.data.legalities,
