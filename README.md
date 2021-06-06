@@ -19,6 +19,7 @@ Run this bot locally by using:
 + ;stop
 + ;skip
 + ;addrelated (Adds a related song based on the current one playing)
++ ;queue
 
 ## Tech used
 The bot itself is hosted live on Heroku and goes down everyday between 3am-9am mountain standard time.

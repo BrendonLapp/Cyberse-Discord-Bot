@@ -10,6 +10,7 @@ import Stop from "./commands/StopCommand";
 import DisTube from "distube";
 import Skip from "./commands/SkipCommand";
 import AddRelated from './commands/AddRelatedCommand';
+import Queue from "./commands/QueueCommand";
 
 export default class CommandHandler {
     public Handler(message: Message, command: string, args: any, player: DisTube) {
@@ -52,6 +53,10 @@ export default class CommandHandler {
             }
             case 'addrelated': {
                 AddRelated(message, player);
+                break;
+            }
+            case 'queue': {
+                Queue(message, player);
                 break;
             }
         }
