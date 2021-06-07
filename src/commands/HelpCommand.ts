@@ -9,7 +9,7 @@ const Help = (message: Message) => {
     .addFields({ name: 'Prefix', value: Config.prefix, inline: true })
     .addFields({
       name: 'Commands',
-      value: `help \n flipcoin \n rolldie \n pokemon "cardcode" \n yugioh "cardname" \n magic "cardname"`,
+      value: `help \n flipcoin \n rolldie \n pokemon "cardcode" \n yugioh "cardname" \n magic "cardname" \n matchup "participants names"`,
       inline: true
     })
     .addFields({

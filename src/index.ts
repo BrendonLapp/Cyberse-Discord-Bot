@@ -34,7 +34,6 @@ Client.on('message', async (message: Message) => {
   if (message.content.startsWith(prefix)) {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift();
-    console.log(command);
 
     const handler = new CommandHandler();
     if (command != undefined) {

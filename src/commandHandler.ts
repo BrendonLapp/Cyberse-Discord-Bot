@@ -11,9 +11,15 @@ import DisTube from 'distube';
 import Skip from './commands/SkipCommand';
 import AddRelated from './commands/AddRelatedCommand';
 import Queue from './commands/QueueCommand';
+import Matchups from './commands/MatchupCommand';
 
 export default class CommandHandler {
-  public Handler(message: Message, command: string, args: any, player: DisTube) {
+  public Handler(
+    message: Message,
+    command: string,
+    args: any,
+    player: DisTube
+  ) {
     switch (command) {
       case 'help': {
         Help(message);
@@ -57,6 +63,10 @@ export default class CommandHandler {
       }
       case 'queue': {
         Queue(message, player);
+        break;
+      }
+      case 'matchup': {
+        Matchups(message, args);
         break;
       }
     }
