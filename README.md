@@ -39,5 +39,3 @@ It is written in typescript.
 
 ## Future Work
 
-Implement a music playing feature
-Expand the existing functionality of the yugioh, pokemon and mtg commands.
