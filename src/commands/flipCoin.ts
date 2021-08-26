@@ -1,6 +1,6 @@
 import { Message } from 'discord.js';
 
-const FlipCoinCommand = (message: Message) => {
+const FlipCoin = (message: Message) => {
   const flipCoin = Math.floor(Math.random() * (2 - 1 + 1) + 1);
   let coinFace;
   if (flipCoin === 1) {
@@ -11,4 +11,4 @@ const FlipCoinCommand = (message: Message) => {
   message.channel.send('The coin landed on: ' + coinFace + '!');
 };
 
-export default FlipCoinCommand;
+export default FlipCoin;

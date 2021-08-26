@@ -1,7 +1,7 @@
 import { Message } from 'discord.js';
 import Distube from 'distube';
 
-const ViewQueue = async (message: Message, player: Distube) => {
+const AddRelated = async (message: Message, player: Distube) => {
   try {
     if (message.member != undefined) {
       if (message.member.voice.channel != undefined) {
@@ -18,4 +18,4 @@ const ViewQueue = async (message: Message, player: Distube) => {
   }
 };
 
-export default ViewQueue;
+export default AddRelated;

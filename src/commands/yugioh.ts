@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { Message } from 'discord.js';
-import { Card } from '../model/Card';
+import { Card } from '../types/Card';
 
 const Yugioh = async (message: Message, args: any) => {
+  console.log(message, args);
+
   try {
     const cardName = args.join(' ');
     const response = await axios.get(

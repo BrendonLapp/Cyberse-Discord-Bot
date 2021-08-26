@@ -1,8 +1,8 @@
 import Discord, { Message } from 'discord.js';
 import Config from './config/config.json';
 import express, { Request, Response } from 'express';
-import CommandHandler from './commandHandler';
 import DisTube from 'distube';
+import { commandMap } from './types/commandMap';
 
 const PORT = process.env.PORT || 5000;
 const Client = new Discord.Client();
@@ -35,10 +35,11 @@ Client.on('message', async (message: Message) => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift();
 
-    const handler = new CommandHandler();
-    if (command != undefined) {
-      handler.Handler(message, command, args, player);
-    }
+    const commandFunction = commandMap[`command ${command}`];
+
+    console.log(commandFunction);
+
+    await commandFunction(message, args, player);
   }
 });
 

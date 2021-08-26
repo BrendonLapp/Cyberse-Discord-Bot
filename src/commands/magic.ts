@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { Message } from 'discord.js';
-import { Card } from '../model/Card';
+import { Card } from '../types/Card';
 
 const Magic = async (message: Message, args: any) => {
+  console.log(message, args);
+
   try {
     const cardName = args.join(' ');
     const response = await axios.get(
@@ -28,6 +30,8 @@ const Magic = async (message: Message, args: any) => {
     } else if (foundCard.legalCommander === 'banned') {
       foundCard.displayMessage += ' Commander: banned :no_entry_sign:';
     }
+
+    console.log(foundCard);
 
     message.channel.send('Info for: ' + foundCard.displayMessage);
     message.channel.send(foundCard.image);

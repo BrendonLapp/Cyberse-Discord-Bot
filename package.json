@@ -46,6 +46,6 @@
     "rimraf": "^3.0.2",
     "typescript": "^3.9.9",
     "ytdl": "^1.4.1",
-    "ytdl-core": "^4.8.2"
+    "ytdl-core": "^4.9.1"
   }
 }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Message } from 'discord.js';
-import { Card } from '../model/Card';
+import { Card } from '../types/Card';
 
 const Pokemon = async (message: Message, args: any) => {
   try {

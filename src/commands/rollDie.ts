@@ -1,6 +1,6 @@
 import { Message } from 'discord.js';
 
-const RollDieCommand = (message: Message, rolls: number) => {
+const RollDie = (message: Message, rolls: number) => {
   if (rolls > 6) {
     return "You can't roll that many dice! The max is 6.";
   }
@@ -30,4 +30,4 @@ const RollDieCommand = (message: Message, rolls: number) => {
   message.channel.send(messageBuilder);
 };
 
-export default RollDieCommand;
+export default RollDie;
