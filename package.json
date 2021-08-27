@@ -6,10 +6,8 @@
   "scripts": {
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
-    "prestart:dev": "npm run build",
     "start:dev": "nodemon build/index.js",
     "build": "tsc",
-    "prestart": "npm run build",
     "start": "node build/index.js",
     "prettier-format": "prettier --config .prettierrc --write"
   },

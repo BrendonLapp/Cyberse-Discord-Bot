@@ -34,9 +34,12 @@ The bot is hosted live on Heroku and goes down everyday between 3am-9am mountain
 - ;yugioh *card name* (Returns an image, cardname and banlist status if on the list)
 
 ## Tech used
+
 - TypeScript
 - Express
 - Discord.JS
 - Distube.JS
 
 ## Future Work
+
+> Currently none. But I am open to ideas for more commands to add.
