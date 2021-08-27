@@ -21,12 +21,12 @@ Client.on('ready', () => {
 const prefix = Config.prefix;
 const player = new DisTube(client);
 
-player.on('initQueue', (queue) => {
+player.on('initQueue', (queue: { autoplay: boolean; volume: number; }) => {
   queue.autoplay = false;
   queue.volume = 50;
 });
 
-player.on('error', (message) => {
+player.on('error', (message: any) => {
   console.error();
 });
 

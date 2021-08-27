@@ -9,12 +9,12 @@ const Help = (message: Message) => {
     .addFields({ name: 'Prefix', value: Config.prefix, inline: true })
     .addFields({
       name: 'Commands',
-      value: `help \n flipcoin \n rolldie \n pokemon "cardcode" \n yugioh "cardname" \n magic "cardname" \n matchup "participants names"`,
+      value: `flipcoin \n help \n magic "cardname" \n matchup "participants names"  \n pokemon "cardcode" \n rolldie \n yugioh "cardname"  `,
       inline: true
     })
     .addFields({
       name: 'Music Commands',
-      value: `play "song name" \n stop \n skip \n addrelated \n queue`,
+      value: `addrelated \n isplaying \n join \n leave \n play "song name" \n queue \n skip \n stop`,
       inline: true
     });
   message.channel.send(help);

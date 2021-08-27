@@ -12,18 +12,21 @@ You will also need to update the config.json.example file to match your own bots
 
 > Any command that takes extra parameters in "" do not need the "" and instead just the name or code
 
-- help
-- ;rolldie "number of rolls" (Can be run without an number of rolls argument or up to the max of 6)
-- ;flipcoin
-- ;yugioh _card name_ (Returns an image, cardname and banlist status if on the list)
-- ;pokemon _card code_ (Returns an image, cardname and legality in standard if on the list)
-- ;mtg _card name_ (Returns an image, cardname and legaility in commander and stander if on the list)
-- ;matchup _participants names_
-- ;play _song name or url_
-- ;stop
-- ;skip
-- ;addrelated (Adds a related song based on the current one playing)
-- ;queue
+- ;addrelated (Adds a related song based on the current one playing)
+- ;flipcoin
+- ;help
+- ;isplaying
+- ;join
+- ;leave
+- ;matchup *participants names*
+- ;mtg *card name* (Returns an image, cardname and legaility in commander and stander if on the list)
+- ;play *song name or url*
+- ;pokemon *card code* (Returns an image, cardname and legality in standard if on the list)
+- ;queue
+- ;rolldie "number of rolls" (Can be run without any number of rolls argument or up to the max of 6)
+- ;skip
+- ;stop
+- ;yugioh *card name* (Returns an image, cardname and banlist status if on the list)
 
 ## Tech used
 
@@ -38,4 +41,3 @@ It is written in typescript.
 - Distube.JS
 
 ## Future Work
-
