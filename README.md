@@ -17,28 +17,28 @@ The bot is hosted live on Heroku and goes down everyday between 3am-9am mountain
 
 > Any command that takes extra parameters in "" do not need the "" and instead just the name or code
 
-- ;addrelated (Adds a related song based on the current one playing)
-- ;flipcoin
-- ;help
-- ;isplaying
-- ;join
-- ;leave
-- ;matchup *participants names*
-- ;mtg *card name* (Returns an image, cardname and legaility in commander and stander if on the list)
-- ;play *song name or url*
-- ;pokemon *card code* (Returns an image, cardname and legality in standard if on the list)
-- ;queue
-- ;rolldie "number of rolls" (Can be run without any number of rolls argument or up to the max of 6)
-- ;skip
-- ;stop
-- ;yugioh *card name* (Returns an image, cardname and banlist status if on the list)
+- addrelated (Adds a related song based on the current one playing)
+- flipcoin
+- help
+- isplaying
+- join
+- leave
+- matchup *participants names*
+- mtg *card name* (Returns an image, cardname and legaility in commander and stander if on the list)
+- play *song name or url*
+- pokemon *card code* (Returns an image, cardname and legality in standard if on the list)
+- queue
+- rolldie "number of rolls" (Can be run without any number of rolls argument or up to the max of 6)
+- skip
+- stop
+- yugioh *card name* (Returns an image, cardname and banlist status if on the list)
 
 ## Tech used
 
-- TypeScript
-- Express
-- Discord.JS
-- Distube.JS
+* TypeScript
+* Express
+* Discord.JS
+* Distube.JS
 
 ## Future Work
 
