@@ -1,12 +1,11 @@
 import Discord, { Message } from 'discord.js';
-import Config from '../config/config.json';
 
 const Help = (message: Message) => {
   const help = new Discord.MessageEmbed()
     .setColor('#0099ff')
     .setTitle('Cyberse Help')
     .setDescription('These are my commands')
-    .addFields({ name: 'Prefix', value: Config.prefix, inline: true })
+    .addFields({ name: 'Prefix', value: process.env.PREFIX, inline: true })
     .addFields({
       name: 'Commands',
       value: `flipcoin \n help \n magic "cardname" \n matchup "participants names"  \n pokemon "cardcode" \n rolldie \n yugioh "cardname"  `,
