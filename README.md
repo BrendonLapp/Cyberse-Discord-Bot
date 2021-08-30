@@ -9,7 +9,7 @@ The bot is hosted live on Heroku and goes down everyday between 3am-9am mountain
 ## To Run Locally
 
 1. Generate a bot token on Discords website [here](https://discord.com/developers).
-2. Create a `config.json` file in the `config` folder.
+2. Create a `.env` file in the `root` folder.
 3. Paste in your bot token and set a `prefix`, eg: `;`.
 4. To run the bot locally use `npm run start`.
 
@@ -35,10 +35,10 @@ The bot is hosted live on Heroku and goes down everyday between 3am-9am mountain
 
 ## Tech used
 
-* TypeScript
-* Express
-* Discord.JS
-* Distube.JS
+- TypeScript
+- Express
+- Discord.JS
+- Distube.JS
 
 ## Future Work
 
