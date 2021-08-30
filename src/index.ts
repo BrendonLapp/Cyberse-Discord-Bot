@@ -1,5 +1,4 @@
 import Discord, { Message } from 'discord.js';
-import Config from './config/config.json';
 import express, { Request, Response } from 'express';
 import DisTube from 'distube';
 import { commandMap } from './types/commandMap';
@@ -21,7 +20,9 @@ Client.on('ready', () => {
 console.log(process.env.TOKEN);
 console.log(process.env.PREFIX);
 
-const prefix = Config.prefix;
+const prefix = process.env.PREFIX;
+const token = process.env.TOKEN;
+
 const player = new DisTube(client);
 
 player.on('initQueue', (queue: { autoplay: boolean; volume: number }) => {
@@ -33,18 +34,20 @@ player.on('error', (message: any) => {
   console.error();
 });
 
-Client.on('message', async (message: Message) => {
-  if (message.content.startsWith(prefix)) {
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift();
+if (prefix) {
+  Client.on('message', async (message: Message) => {
+    if (message.content.startsWith(prefix)) {
+      const args = message.content.slice(prefix.length).trim().split(/ +/g);
+      const command = args.shift();
 
-    const commandFunction = commandMap[`command ${command}`];
+      const commandFunction = commandMap[`command ${command}`];
 
-    console.log(commandFunction);
+      console.log(commandFunction);
 
-    await commandFunction(message, args, player);
-  }
-});
+      await commandFunction(message, args, player);
+    }
+  });
+}
 
-Client.login(Config.token);
+Client.login(token);
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
