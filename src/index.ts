@@ -18,10 +18,13 @@ Client.on('ready', () => {
   console.log('I am ready ');
 });
 
+console.log(process.env.TOKEN);
+console.log(process.env.PREFIX);
+
 const prefix = Config.prefix;
 const player = new DisTube(client);
 
-player.on('initQueue', (queue: { autoplay: boolean; volume: number; }) => {
+player.on('initQueue', (queue: { autoplay: boolean; volume: number }) => {
   queue.autoplay = false;
   queue.volume = 50;
 });
