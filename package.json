@@ -11,6 +11,9 @@
     "start": "node build/index.js",
     "prettier-format": "prettier --config .prettierrc --write"
   },
+  "engines": {
+    "node": "12.18.3"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/BrendonLapp/Cyberse-Discord-Bot"
