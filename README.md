@@ -24,7 +24,7 @@ The bot is hosted live on Heroku and goes down everyday between 3am-9am mountain
 - join
 - leave
 - matchup *participants names*
-- mtg *card name* (Returns an image, cardname and legaility in commander and standard if on the list)
+- mtg *card name* (Returns an image, cardname and legaility in commander and stander if on the list)
 - play *song name or url*
 - pokemon *card code* (Returns an image, cardname and legality in standard if on the list)
 - queue

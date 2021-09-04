@@ -2,7 +2,6 @@ import Discord, { Message } from 'discord.js';
 import express, { Request, Response } from 'express';
 import DisTube from 'distube';
 import { commandMap } from './types/commandMap';
-import path from 'path';
 
 const PORT = process.env.PORT || 5000;
 const Client = new Discord.Client();
@@ -10,11 +9,16 @@ const Client = new Discord.Client();
 const app = express();
 const client = new Discord.Client();
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use('/', (request: Request, response: Response) => {
+  response.sendStatus(200);
+});
 
 Client.on('ready', () => {
   console.log('I am ready ');
 });
+
+console.log(process.env.TOKEN);
+console.log(process.env.PREFIX);
 
 const prefix = process.env.PREFIX;
 const token = process.env.TOKEN;
