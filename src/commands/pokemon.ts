@@ -22,7 +22,7 @@ const Pokemon = async (message: Message, args: any) => {
         foundCard.displayMessage += 'banned :no_entry_sign:';
       }
 
-      message.channel.send('Info for: ' + foundCard.displayMessage);
+      message.channel.send(foundCard.displayMessage);
       message.channel.send(foundCard.image);
     } else {
       message.channel.send(

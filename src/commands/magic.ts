@@ -31,7 +31,7 @@ const Magic = async (message: Message, args: any) => {
       foundCard.displayMessage += ' Commander: banned :no_entry_sign:';
     }
 
-    message.channel.send('Info for: ' + foundCard.displayMessage);
+    message.channel.send(foundCard.displayMessage);
     message.channel.send(foundCard.image);
   } catch {
     message.channel.send('There is no card with that name.');
